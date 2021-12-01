@@ -2,28 +2,28 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-
-
   const [number1, setNumber1] = useState("");
   const [number2, setNumber2] = useState("");
   const [currentOperation, setCurrentOperation] = useState("");
   const [result, setResult] = useState(0);
-  
+
   function allClear() {
     setNumber1("");
     setNumber2("");
     setCurrentOperation("");
     setResult(0);
   }
-  
+
   function del() {
     if (number2 !== "") {
-      setNumber2("");
+      setNumber2(number2.substring(0, number2.length - 1));
     } else {
-      setNumber1("");
+      if (number1 !== "") {
+        setNumber1(number1.substring(0, number1.length - 1));
+      }
     }
   }
-  
+
   function clickNumber(val) {
     if (currentOperation === "") {
       setNumber1(number1 + val);
@@ -31,11 +31,11 @@ function App() {
       setNumber2(number2 + val);
     }
   }
-  
+
   function clickOperation(val) {
     setCurrentOperation(val);
   }
-  
+
   function getResult() {
     switch (currentOperation) {
       case "+":
@@ -52,7 +52,6 @@ function App() {
         break;
     }
   }
-  
 
   return (
     <div className="App">

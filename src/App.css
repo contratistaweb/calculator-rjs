@@ -5,12 +5,13 @@
 }
 
 body {
-  background: linear-gradient(to right, #c8d2fc, #feefc7);
+  background: repeating-linear-gradient(55deg, #c8d2fcaa, #000022aa 5%);
 }
 
 .App {
   height: 100vh;
   width: 100%;
+  
 }
 
 .calculator-grid {
@@ -21,6 +22,7 @@ body {
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: minmax(80px, auto) repeat(5, 80px);
 }
+
 .calculator-grid > button {
   border-radius: 1rem;
   cursor: pointer;
@@ -28,12 +30,12 @@ body {
   font-weight: bold;
   color: black;
   border: 1px solid white;
-  background-color: #fafafa75;
+  background-color: #00AFF0AA;
   margin: 3px;
 }
 
 .calculator-grid > button:hover {
-  background-color: white;
+  background-color: #AA0000AA;
 }
 
 .span-two{
@@ -43,7 +45,7 @@ body {
 .output{
   grid-column:  1/-1;
   margin-bottom: .5rem;
-  background-color: white;
+  background-color: #00AAFFAA;
   display: flex;
   border-radius: 1rem;
   align-items: flex-end;
@@ -61,5 +63,5 @@ font-size: 1.5rem;
 
 .output .current-operand{
 color: salmon;
-font-size: 2.5rem;
+font-size: 2rem;
 }
