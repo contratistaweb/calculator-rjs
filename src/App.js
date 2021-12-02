@@ -33,7 +33,14 @@ function App() {
   }
 
   function clickOperation(val) {
-    setCurrentOperation(val);
+    if (result != 0) {
+      setCurrentOperation(val);
+      setNumber1(result);
+      setNumber2("");
+      setResult(0);
+    } else {
+      setCurrentOperation(val);
+    }
   }
 
   function getResult() {

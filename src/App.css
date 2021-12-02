@@ -5,7 +5,8 @@
 }
 
 body {
-  background: repeating-linear-gradient(55deg, #c8d2fcaa, #000022aa 5%);
+  /* background: repeating-linear-gradient(55deg, #c8d2fcaa, #000022aa 5%); */
+  background: radial-gradient(circle at 50%, #333, #333 30%, #eee 45%, #333 45%);
 }
 
 .App {
